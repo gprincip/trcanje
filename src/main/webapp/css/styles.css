@@ -1,0 +1,171 @@
+/*za sve*/
+
+a{
+	text-decoration:none;
+	font: Verdana, Geneva, sans-serif;
+	color: #914300;
+}
+
+a:hover{
+	text-decoration: underline;
+	color: #f46f00;
+}
+
+/*index.html*/
+#naslov {
+	text-decoration: none;
+	color: black;
+}
+
+div.pomocni {
+	margin: auto;
+	width: 50%;
+	border: solid chocolate medium;
+	border-radius: 5%;
+}
+
+div.pomocni p {
+	color: black;
+	font-size: 14;
+}
+
+div.profil_info {
+	background-color: #EEEEEE;
+	width: 130px;
+	text-align: center;
+	position: relative;
+	left: 93%;
+}
+
+div.glavni_meni {
+	text-align: center;
+}
+
+div.glavni_meni a {
+	font-size: 16px;
+	font: Verdana, Geneva, sans-serif;
+	text-decoration: none;
+	color: black;
+}
+
+div.glavni_meni a:hover {
+	transition: color 0.3s;
+	color: chocolate;
+}
+
+div.wrapper_glavni {
+	height: 100%;
+	width: 50%;
+	margin: auto;
+	/* 	border-left: solid thin black;
+	border-right: solid thin black; */
+}
+
+div.pomocni p.naslov {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+/*profil.jsp*/
+div.wrapper_profil_glavni {
+	height: 100%;
+	width: 30%;
+	margin: auto;
+	display: inline-block;
+	
+	/* border-left: solid thin black;
+	border-right: solid thin black; */
+}
+
+div.profil_slika {
+	border: solid chocolate medium;
+	border-radius: 2%;
+	display: inline-block;
+	padding: 3px;
+}
+
+div.prati input {
+	background-color: chocolate;
+	border: none;
+	color: white;
+	padding: 10px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+div.pomocni_profil {
+	margin: auto;
+	width: 80%;
+	border: solid chocolate medium;
+	border-radius: 5%;
+	display: inline-block;
+}
+
+div.pomocni_profil p{
+	color: black;
+	font-size: 14px;
+}
+
+div.pomocni_profil p.naslov {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+div.pratimPratioci {
+	display: inline-block;
+	float:inherit;
+	vertical-align: top;
+	background-color: #fce0d1;
+	border-radius: 5%;
+	padding: 10px;
+}
+
+div.pratimPratioci a{
+	text-decoration: none;
+	font: Verdana, Geneva, sans-serif;
+}
+
+div.table_prijatelji_wrapper{
+	border-right: black solid 1px;
+	display: inline-block;
+	padding: 4px;
+}
+
+div.table_pratioci_wrapper{
+	padding: 3px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/*register.html*/
+div.register_wrapper {
+	width: 400px;
+	height: 600px;
+	margin: auto;
+	border: solid chocolate medium;
+	padding: 10px;
+	border-radius: 5%;
+}
+
+/* Full-width input fields */
+div.register_wrapper input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/*dodajAktivnost.html*/
+div.dodajAktivnost_wrapper {
+	display: inline-block;
+	margin: auto;
+	border: solid chocolate medium;
+	padding: 10px;
+	border-radius: 5%;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app = "app">
+<head>
+<meta charset="ISO-8859-1">
+<script src="js/angular.min.js"></script>
+<script src="js/register.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<title>Insert title here</title>
+</head>
+<body ng-controller = "appController">
+<div class="register_wrapper">
+
+<form method="POST" action="services/rest/registrujKorisnika" enctype="multipart/form-data">
+
+<center>
+Korisnicko ime: <input type="text" name="username" ng-model="username"/> <br/> <br/>
+Email: <input type="text" name="email" ng-model="email"/> <br/> <br/>
+Lozinka: <input type="password" name = "password" ng-model="password"/> <br/> <br/>
+Ukucaj ponovo lozinku: <input type="password" name="opetpassword" ng-model ="opetpassword"/> <br/> <br/>
+Ime: <input type="text" name="ime" ng-model="ime"/> <br/> <br/>
+Prezime: <input type="text" name="prezime" ng-model="prezime"/> <br/> <br/>
+
+
+		Izaberi sliku: <input type="file" name="file" accept=".jpg,.jpeg,.png,.gif">
+ 
+		<!-- Name: <input type="text" name="name"> -->
+ 
+ 		<br/><br/>
+		<input type="submit" value="Registruj se"> 
+	</form>	
+
+</center>
+
+</div>
+
+</body>
+</html>

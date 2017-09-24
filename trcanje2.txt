@@ -1,0 +1,28 @@
+create database trcanje2;
+use trcanje2;
+
+create table user(
+
+username varchar(25) primary key,
+password varchar(25),
+enabled int(2)
+
+)engine=InnoDB default charset=utf8;
+
+create table authorities(
+
+username varchar(25),
+authority varchar(25),
+primary key(username, authority),
+foreign key(username) 
+references user(username)
+on update cascade
+on delete restrict
+
+)engine=InnoDB default charset=utf8;
+
+insert into user values
+("pera" , "peracar", 1);
+
+insert into authorities values
+("pera" , "ROLE_USER");

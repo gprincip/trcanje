@@ -1,0 +1,62 @@
+
+<html ng-app="app" ng-controller="appController">
+
+<head >
+<script src="js/angular.min.js"></script>
+<script src="js/App.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
+    <center>
+	<h1><a href="/trcanje" id="naslov">Trcko</a></h1>
+		
+	</center>
+	
+	<div class = "profil_info"  ng-if="ulogovaniKorisnik != null" ></br>
+			<p><img alt="{{ulogovaniKorisnik.username}}" ng-src="services/rest/profilna/{{ulogovaniKorisnik.username}}?imeSlike={{ulogovaniKorisnik.slika}}" height="50px"> </img> </p><!-- aktivnost.slika je slika korisnika koji je obavio aktivnost -->
+		<a href="#" ng-click = "otvoriProfil(ulogovaniKorisnik.username)">{{ulogovaniKorisnik.username}}</a><br/>
+		<a href="logout">Izloguj se</a>
+	</div>
+	
+	<div class="glavni_meni">
+	
+		<p>
+		<a href="dodajAktivnost.html"> Dodaj aktivnost </a> |
+		<a href="#"> Moje aktivnosti </a>
+		</p>
+		
+	</div>
+	
+	<hr />
+
+
+</head>
+
+<body>
+<center>
+<div class="wrapper_glavni">
+
+	<div class="aktivnosti_glavni" ng-model="aktivnosti" ng-repeat="aktivnost in aktivnosti">
+		<div class="pomocni" >
+		
+			<p class="naslov">{{aktivnost.aktivnost.naslov}} </p> 
+			<p><img alt="{{aktivnost.korisnik.username}}" ng-src="services/rest/profilna/{{aktivnost.korisnik.username}}?imeSlike={{aktivnost.korisnik.slika}}" height="50px"> </img> </p><!-- aktivnost.slika je slika korisnika koji je obavio aktivnost -->
+			<p><a href="#" ng-click = "otvoriProfil(aktivnost.korisnik.username)" >{{aktivnost.korisnik.username}} </a></p>
+			<br />
+			<!-- TODO: da pise ime i prezime -->
+			<p class="datum">{{aktivnost.aktivnost.datumFormatiran}} </p>
+			<p>
+			{{aktivnost.aktivnost.tempo}}/km  {{aktivnost.aktivnost.distanca}} km</p>
+			<p>Vreme: {{aktivnost.aktivnost.trajanje}}</p>
+			<br />
+			<table><tr><th><input type="image" src="slike/lajk.png" height="25px" ng-click="lajkuj(ulogovaniKorisnik.username, aktivnost.aktivnost.id);"/></th><th>{{aktivnost.brojLajkova}}</th></tr></table>
+		
+		</div>
+		<br/><br/>
+	</div>
+	<div ng-if="(aktivnosti.length < ukupanBrojAktivnosti) && aktivnosti.length > 0"><center><a href="#!" ng-click="ucitajJos()">Ucitaj još</a></center></div>
+	<br/>
+</div>
+</center>
+</body>
+
+</html>

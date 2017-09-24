@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="dodavanjeAktivnosti">
+<head>
+<meta charset="ISO-8859-1">
+<script src="js/angular.min.js"></script>
+<script src="js/dodavanjeAktivnosti.js"></script>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<title>Dodavanje nove aktivnosti</title>
+ <center>
+	<h1><a href="/trcanje" id="naslov">Trcko</a></h1>	
+</center>
+</head>
+<body ng-controller="appController">
+
+<hr />
+
+<center>
+<div class="dodajAktivnost_wrapper">
+<form method="POST" action="services/rest/dodajAktivnostGpx" enctype="multipart/form-data"> <!-- dodajAktivnostGpx dodaje i aktivnost u bazu sa nazivom gpx fajla i uploduje aktivnost na server -->
+
+
+Izaberi aktivnost: <input type="file" name="file" accept=".gpx"/><br/><br/>
+Naslov: <input type="text" name="naslov"/>
+<input type="hidden" name="username" value="{{ulogovaniKorisnik.username}}"/><br/><br/>
+<input type="submit" value="Dodaj"/>
+
+</form>
+</div>
+</center>
+
+</body>
+</html>
