@@ -6,9 +6,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-<profiles>
-
-</profiles>
 
 	<dependencies>
 
@@ -145,6 +142,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.0.0</version>
+			
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -155,10 +153,10 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-
-		<finalName>ROOT</finalName>
-
+		
+ 
 		</plugins>
+		<finalName>ROOT</finalName>
 	</build>
 
 </project>
