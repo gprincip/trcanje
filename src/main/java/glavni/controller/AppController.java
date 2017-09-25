@@ -189,7 +189,7 @@ public class AppController {
 		SimpleMailMessage smm = new SimpleMailMessage();
 		
 		smm.setFrom("gprincip132@gmail.com");
-		smm.setTo("gavrilo.adamovic@pmf.edu.rs");
+		smm.setTo("gprincip132@gmail.com");
 		smm.setSubject("naslov");
 		smm.setText("text");
 		
