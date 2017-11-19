@@ -1,0 +1,29 @@
+select count(*) as cnt from aktivnost
+inner join korisnik on aktivnost.username = korisnik.username
+and aktivnost.username in(
+select username2 from prijateljsa
+where username1 = "pera"
+or username2 = "pera"
+);
+
+select aktivnost.*, korisnik.* from aktivnost, korisnik where aktivnost.username = korisnik.username and( aktivnost.username in( select username2 from prijateljsa where username1 = "pera" )or aktivnost.username = "pera") order by datum desc limit 3 offset 0;
+
+select count(*) as cnt from aktivnost inner join korisnik on aktivnost.username = korisnik.username and aktivnost.username = ?;
+
+-Upload slike za profil
+-Dizajn login.html, register.html, dodavanje aktivnosti, i profilne strane
+-Upload gpx fajl
+-Parsiranje racunanje i prikazivanje gpx podataka, mape, grafika
+-eksepsni
+-koga ja pratim
+
+-dodavanje prijatelja i privilegije prijatelja 
+-prikazivanje liste prijatelja po stranama
+-posebna strana za detalje o aktivnosti
+-komentari
+-obavestenja
+-login preko emaila i slanje linka na email
+
+-dodaj da moze da se uploaduje samo slika, a ne bilo koji fajl
+
+-zastita rest apija, oauth2, zabrana da se salju zahtevi iz browsera, samo iz aplikacije 
