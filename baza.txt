@@ -1,6 +1,8 @@
 create database trcanje;
 use trcanje;
 
+HAHAHAHAH
+
 create table korisnik(
 username varchar(25) primary key,
 password varchar(60),
